@@ -1,3 +1,4 @@
+
 import React from 'react';
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import StatCard from '@/components/ui/dashboard/StatCard';
@@ -40,58 +41,54 @@ const Index = () => {
           <StatCard 
             title="Patients totaux" 
             value="2,546" 
-            trend="+12.5%" 
-            trendDirection="up" 
-            icon={<Users className="h-4 w-4" />} 
+            trend={{ value: 12.5, isPositive: true }}
+            icon={Users}
           />
           <StatCard 
             title="Nouveaux patients" 
             value="145" 
-            trend="+28.4%" 
-            trendDirection="up" 
-            icon={<UserPlus className="h-4 w-4" />} 
+            trend={{ value: 28.4, isPositive: true }}
+            icon={UserPlus}
           />
           <StatCard 
             title="Rendez-vous aujourd'hui" 
             value="32" 
-            trend="+4.6%" 
-            trendDirection="up" 
-            icon={<CalendarCheck className="h-4 w-4" />} 
+            trend={{ value: 4.6, isPositive: true }}
+            icon={CalendarCheck}
           />
           <StatCard 
             title="Taux d'occupation" 
             value="87%" 
-            trend="-2.3%" 
-            trendDirection="down" 
-            icon={<BarChart3 className="h-4 w-4" />} 
+            trend={{ value: 2.3, isPositive: false }}
+            icon={BarChart3}
           />
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <StatCard 
             title="Patients" 
-            value={samplePatients.length} 
-            icon={Users}
+            value={samplePatients.length.toString()} 
             trend={{ value: 12.5, isPositive: true }}
+            icon={Users}
           />
           <StatCard 
             title="Rendez-vous aujourd'hui" 
-            value={todayAppointments.length} 
+            value={todayAppointments.length.toString()} 
             icon={Calendar}
             iconClassName="bg-coral/10 text-coral"
           />
           <StatCard 
             title="Chiffre d'affaires" 
             value="8,250 DH" 
-            icon={DollarSign}
             trend={{ value: 8.1, isPositive: true }}
+            icon={DollarSign}
             iconClassName="bg-green-500/10 text-green-600"
           />
           <StatCard 
             title="Taux d'occupation" 
             value="85%" 
-            icon={Activity}
             trend={{ value: 5.2, isPositive: false }}
+            icon={Activity}
             iconClassName="bg-amber-500/10 text-amber-600"
           />
         </div>
