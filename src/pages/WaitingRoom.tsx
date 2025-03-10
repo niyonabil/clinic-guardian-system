@@ -53,7 +53,7 @@ const WaitingRoom = () => {
           <div className="flex items-center text-amber-600 bg-amber-50 p-3 rounded-lg">
             <AlertCircle className="h-5 w-5 mr-3 flex-shrink-0" />
             <p className="text-sm">
-              La vue publique est conçue pour être affichée sur un écran en salle d'attente. Les informations des patients sont partiellement anonymisées pour préserver la confidentialité.
+              La vue publique est conçue pour être affichée sur un écran en salle d&apos;attente. Les informations des patients sont partiellement anonymisées pour préserver la confidentialité.
             </p>
           </div>
         </div>

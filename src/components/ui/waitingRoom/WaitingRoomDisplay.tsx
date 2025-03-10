@@ -34,7 +34,7 @@ const WaitingRoomDisplay: React.FC<WaitingRoomDisplayProps> = ({
     return (
       <div className={cn('glass-panel p-8 text-center', className)}>
         <UserCheck className="h-12 w-12 mx-auto text-gray-400 mb-4" />
-        <h3 className="text-xl font-medium text-gray-800">Salle d'attente vide</h3>
+        <h3 className="text-xl font-medium text-gray-800">Salle d&apos;attente vide</h3>
         <p className="text-gray-500 mt-2">Aucun patient en attente pour le moment</p>
       </div>
     );
@@ -51,7 +51,7 @@ const WaitingRoomDisplay: React.FC<WaitingRoomDisplayProps> = ({
           'font-medium',
           publicDisplay ? 'text-xl' : 'text-lg'
         )}>
-          {publicDisplay ? 'Patients en attente' : 'Salle d'attente'}
+          {publicDisplay ? 'Patients en attente' : 'Salle d&apos;attente'}
         </h3>
         <div className="flex items-center text-white/90">
           <Clock className="h-4 w-4 mr-2" />
