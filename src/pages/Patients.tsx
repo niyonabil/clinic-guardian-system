@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import PatientCard from '@/components/ui/patients/PatientCard';
 import { Patient, samplePatients } from '@/lib/data';
@@ -7,7 +8,7 @@ import { PlusCircle, Search, FilterX, UserPlus } from 'lucide-react';
 
 const Patients = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
+  const navigate = useNavigate();
   
   const filteredPatients = samplePatients.filter(patient => {
     const fullName = `${patient.firstName} ${patient.lastName}`.toLowerCase();
@@ -17,7 +18,7 @@ const Patients = () => {
   });
   
   const handlePatientClick = (patient: Patient) => {
-    setSelectedPatient(patient);
+    navigate(`/patient/${patient.id}`);
   };
   
   return (
