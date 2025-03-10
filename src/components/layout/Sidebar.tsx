@@ -14,7 +14,7 @@ import {
   LogOut, 
   ChevronLeft,
   ChevronRight,
-  Tooth
+  Stethoscope // Using Stethoscope instead of Tooth
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -59,7 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className }) => {
       <div className="h-16 flex items-center px-4 border-b border-gray-100">
         <div className="flex items-center">
           <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-blue rounded-lg">
-            <Tooth className="h-5 w-5 text-white" />
+            <Stethoscope className="h-5 w-5 text-white" />
           </div>
           {!collapsed && (
             <h1 className="ml-3 text-xl font-semibold text-gray-900">Dentali</h1>
